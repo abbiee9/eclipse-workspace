@@ -1,0 +1,18 @@
+class A1 {
+	void foo() throws Exception {
+		throw new Exception();
+	}
+}
+
+class SubB2 extends A1 {
+	void foo() throws Exception {
+		System.out.println("B ");
+	}
+}
+
+class Tester {
+	public static void main(String[] args) {
+		A1 a = new SubB2();
+		a.foo();
+	}
+}
